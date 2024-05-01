@@ -2,7 +2,7 @@
 
 This python script (webcam.py) creates timelapse videos using webcam images. Usage is as follows:
 
-    $ ./webcam.py 10 4h webcamImages 0
+    $ ./webcam.py 10 4h webcamImages 0 1920 1080
 
 where:
 
@@ -12,7 +12,10 @@ where:
 
 - webcamImages is the name of the folder the images will be saved in. It will be created in the current working directory, determined by `os.getcwd()`
 
-- 0 is the camera port of the connected usb webcam. If you do this on a laptop 0 will mostly likely be the built-in camera. 
+- 0 is the camera port of the connected usb webcam. If you do this on a laptop 0 will mostly likely be the built-in camera.
+
+- 1920 and 1080 are part of the camera's resolution. You can use it to take smaller pictures if you prefer.
 
 # Credits
 This project is a modified version of https://github.com/mbjd/WebcamTimelapse. I used it as a base as it was perfect for my purpose with a few modifications. 
+
