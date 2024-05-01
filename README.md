@@ -18,8 +18,8 @@ The usage of the script is as follows:
 - 1920 and 1080 are part of the camera's resolution. You can use it to take smaller pictures if you prefer.
 
 ## Requirements
-opencv-python is required for this script to run as it is used to connect to your webcam. 
+[opencv-python](https://pypi.org/project/opencv-python/) is required for this script to run as it is used to connect to your webcam. 
 
 ## Credits
-This project is a modified version of https://github.com/mbjd/WebcamTimelapse. I used it as a base as it was perfect for my purpose with a few modifications. 
+This project is a modified version of [mbjd's WebcamTimelapse](https://github.com/mbjd/WebcamTimelapse). I used it as a base as it was perfect for my purpose with a few modifications. 
 
