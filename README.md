@@ -1,6 +1,6 @@
 # USB Webcam Timelapse
 
-This python script (webcam.py) creates timelapse videos using webcam images. 
+This python script (webcam.py) creates timelapse videos using usb webcam images. 
 
 ## Usage 
 The usage of the script is as follows:
