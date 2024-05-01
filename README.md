@@ -13,7 +13,7 @@ The usage of the script is as follows:
 
 - webcamImages is the name of the folder the images will be saved in. It will be created in the current working directory, determined by `os.getcwd()`
 
-- 0 is the camera port of the connected usb webcam. If you do this on a laptop 0 will mostly likely be the built-in camera.
+- 0 is the camera port of the connected usb webcam. If you do this on a laptop 0 will mostly likely be the built-in camera. Try and test to see what number works for you.
 
 - 1920 and 1080 are part of the camera's resolution. You can use it to take smaller pictures if you prefer.
 
