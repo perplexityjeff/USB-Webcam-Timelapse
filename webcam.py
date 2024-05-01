@@ -32,7 +32,10 @@ absPath = homeDirectory + '/' + folder
 
 # Webcam stuff
 vid = cv2.VideoCapture(cam_port)
-vid.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+
+#forces MJPG, this will be an option in the future maybe
+#vid.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+
 vid.set(cv2.CAP_PROP_FRAME_WIDTH, cam_width)
 vid.set(cv2.CAP_PROP_FRAME_HEIGHT, cam_height)
 
