@@ -10,6 +10,8 @@ import datetime
 period = float(sys.argv[1])
 folder = str(sys.argv[3])
 cam_port = str(sys.argv[4])
+cam_width = str(sys.argv[5])
+cam_height = str(sys.argv[6])
 duration = int(sys.argv[2][:-1])
 
 # Convert duration of recording to seconds
@@ -31,17 +33,14 @@ absPath = homeDirectory + '/' + folder
 # Webcam stuff
 vid = cv2.VideoCapture(cam_port)
 vid.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
-width = 1920
-height = 1080
-vid.set(cv2.CAP_PROP_FRAME_WIDTH, width)
-vid.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
+vid.set(cv2.CAP_PROP_FRAME_WIDTH, cam_width)
+vid.set(cv2.CAP_PROP_FRAME_HEIGHT, cam_height)
 
 if not os.path.exists(folder):
     os.makedirs(folder)
 
-# Downloader function
-def downloadImage(dir, name):
-    # Saving of webcam image (Added by Jeff)
+# Saving of webcam image
+def getCameraImage(dir, name):   
     result, image = vid.read() 
     if result: 
         cv2.imwrite(os.path.join(dir, name), image) 
@@ -64,7 +63,7 @@ while currentTime < endTime:
 
         now = datetime.datetime.now()
         if now.hour >= 7 and now.hour < 18:
-            downloadImage(folder, timeStr)
+            getCameraImage(folder, timeStr)
         else:
             print("Skipped image")
 
