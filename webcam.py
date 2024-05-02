@@ -6,7 +6,19 @@ import os
 import cv2 
 import datetime
 
+print(" _   _ ____  ____     __        __   _                             _____ _                _                       ")
+print("| | | / ___|| __ )    \ \      / /__| |__   ___ __ _ _ __ ___     |_   _(_)_ __ ___   ___| | __ _ _ __  ___  ___  ")
+print("| | | \___ \|  _ \ ____\ \ /\ / / _ \ '_ \ / __/ _` | '_ ` _ \ _____| | | | '_ ` _ \ / _ \ |/ _` | '_ \/ __|/ _ \ ")
+print("| |_| |___) | |_) |_____\ V  V /  __/ |_) | (_| (_| | | | | | |_____| | | | | | | | |  __/ | (_| | |_) \__ \  __/ ")
+print(" \___/|____/|____/       \_/\_/ \___|_.__/ \___\__,_|_| |_| |_|     |_| |_|_| |_| |_|\___|_|\__,_| .__/|___/\___| ")           
+print("                                                                                                 |_|              ")
+print("")
+print("A script based on the work of mbjd's WebcamTimelapse on GitHub, modified to work with USB camera's by perplexityjeff")
+print("https://github.com/perplexityjeff/USB-Webcam-Timelapse")
+print("")
+
 # Process arguments
+print("Process arguments")
 period = float(sys.argv[1])
 folder = str(sys.argv[3])
 cam_port = str(sys.argv[4])
@@ -25,18 +37,6 @@ elif sys.argv[2].endswith("s"):
     endTime = time.time() + duration
 else:
     print("Invalid argument: sys.argv[2] must be an integer + 'd', 'h', 'm' or 's'")
-
-
-print(" _   _ ____  ____     __        __   _                             _____ _                _                       ")
-print("| | | / ___|| __ )    \ \      / /__| |__   ___ __ _ _ __ ___     |_   _(_)_ __ ___   ___| | __ _ _ __  ___  ___  ")
-print("| | | \___ \|  _ \ ____\ \ /\ / / _ \ '_ \ / __/ _` | '_ ` _ \ _____| | | | '_ ` _ \ / _ \ |/ _` | '_ \/ __|/ _ \ ")
-print("| |_| |___) | |_) |_____\ V  V /  __/ |_) | (_| (_| | | | | | |_____| | | | | | | | |  __/ | (_| | |_) \__ \  __/ ")
-print(" \___/|____/|____/       \_/\_/ \___|_.__/ \___\__,_|_| |_| |_|     |_| |_|_| |_| |_|\___|_|\__,_| .__/|___/\___| ")           
-print("                                                                                                 |_|              ")
-print("")
-print("A script based on the work of mbjd's WebcamTimelapse on GitHub, modified to work with USB camera's by perplexityjeff")
-print("https://github.com/perplexityjeff/USB-Webcam-Timelapse")
-print("")
 
 # Directory stuff
 print("Setting directory parameters")
