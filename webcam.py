@@ -63,12 +63,7 @@ while currentTime < endTime:
         named_tuple = time.localtime()
         time_string = time.strftime("%Y-%m-%d-%H%M%S", named_tuple)
         timeStr = '{0}.jpg'.format(time_string)
-
-        now = datetime.datetime.now()
-        if now.hour >= 7 and now.hour < 18:
-            getCameraImage(folder, timeStr)
-        else:
-            print("Skipped image")
+        getCameraImage(folder, timeStr)
 
     # Sleep 0.1 seconds to make sure nothing is missed
     # Also you can set the interval to something like 0.3 secs
