@@ -41,7 +41,6 @@ else:
 # Directory stuff
 print("Setting directory parameters")
 homeDirectory = os.getcwd()
-absPath = homeDirectory + '/' + folder
 if not os.path.exists(folder):
     os.makedirs(folder)
 
