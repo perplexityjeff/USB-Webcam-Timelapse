@@ -26,6 +26,9 @@ cam_width = int(sys.argv[5])
 cam_height = int(sys.argv[6])
 duration = int(sys.argv[2][:-1])
 
+if isset(sys.argv[7]):
+    four_cc = str(sys.argv[7])
+    
 # Convert duration of recording to seconds
 if sys.argv[2].endswith("d"):
     endTime = time.time() + 24 * 60 * 60 * duration
@@ -47,8 +50,8 @@ if not os.path.exists(folder):
 # Webcam stuff
 print("Setting camera parameters")
 vid = cv2.VideoCapture(cam_port)
-#forces MJPG, this will be an option in the future maybe
-#vid.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
+if four_cc:
+    vid.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(four_cc[0], four_cc[1], four_cc[2], four_cc[3]))
 vid.set(cv2.CAP_PROP_FRAME_WIDTH, cam_width)
 vid.set(cv2.CAP_PROP_FRAME_HEIGHT, cam_height)
 
